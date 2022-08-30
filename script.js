@@ -17,3 +17,7 @@ squaresAll.forEach((square) => {
     
 })
 
+const button = document.createElement('button');
+const header = document.querySelector('h1');
+header.appendChild(button);
+
