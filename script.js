@@ -1,11 +1,17 @@
 const container = document.querySelector('.container');
-const grid = document.createElement('div');
+const gridItem = document.createElement('div');
+
+container.style.display = 'grid';
+container.style.gridTemplateColumns = 'repeat(16, 30px)';
+container.style.gridTemplateRows = 'repeat(16, 30px)';
+container.style.width = '500px';
+container.style.height = '500px';
 
 function makeGrid(gridSize) {
     for (let i = 0;i < gridSize; i++) {
-        const grid = document.createElement('div');   
-        grid.classList.add('square');
-        container.appendChild(grid);
+        const gridItem = document.createElement('div');   
+        gridItem.classList.add('square');
+        container.appendChild(gridItem);
         }
 
 }
