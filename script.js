@@ -1,11 +1,15 @@
 const container = document.querySelector('.container');
 const grid = document.createElement('div');
 
-for (let i = 0;i < 256; i++) {
-const grid = document.createElement('div');   
-grid.classList.add('square');
-container.appendChild(grid);
+function makeGrid(gridSize) {
+    for (let i = 0;i < gridSize; i++) {
+        const grid = document.createElement('div');   
+        grid.classList.add('square');
+        container.appendChild(grid);
+        }
+
 }
+makeGrid(256)
 
 
 const squaresAll = document.querySelectorAll('.square');
@@ -26,17 +30,3 @@ const btn = document.createElement('button');
 header.appendChild(btn);
 
 
-// Not working
-btn.addEventListener('click', () => {
-    for (let i = 0;i < inpt.value; i++) {
-        container.remove()
-        const containerNew = document.createElement('container');
-        const gridNew = document.createElement('div');   
-        gridNew.classList.add('squareNew');
-        containerNew.appendChild(gridNew);
-        containerNew.style.display = 'grid';
-        
-        }
-
-
-})
