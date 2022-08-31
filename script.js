@@ -17,7 +17,26 @@ squaresAll.forEach((square) => {
     
 })
 
-const button = document.createElement('button');
+const inpt = document.createElement('input');
+inpt.setAttribute('type','number');
 const header = document.querySelector('h1');
-header.appendChild(button);
+header.appendChild(inpt);
 
+const btn = document.createElement('button');
+header.appendChild(btn);
+
+
+// Not working
+btn.addEventListener('click', () => {
+    for (let i = 0;i < inpt.value; i++) {
+        container.remove()
+        const containerNew = document.createElement('container');
+        const gridNew = document.createElement('div');   
+        gridNew.classList.add('squareNew');
+        containerNew.appendChild(gridNew);
+        containerNew.style.display = 'grid';
+        
+        }
+
+
+})
