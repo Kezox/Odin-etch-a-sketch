@@ -23,6 +23,7 @@ function colorOnHover () {
     })
 
 }
+colorOnHover();
 
 
 const inpt = document.createElement('input');
@@ -33,4 +34,13 @@ header.appendChild(inpt);
 const btn = document.createElement('button');
 header.appendChild(btn);
 
+btn.addEventListener('click', () => {
+    for (let i = 0;i < squaresAll.length; i++) {
+        squaresAll[i].remove();
+    }
+    makeGrid(inpt.value*inpt.value);
+    container.style.display = 'grid';
+    container.style.gridTemplateColumns = 'repeat(inpt.value, 30px)';
+    container.style.gridTemplateRows = 'repeat(inpt.value, 30px)';
+})
 
