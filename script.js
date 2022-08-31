@@ -49,7 +49,9 @@ btn.addEventListener('click', () => {
     }
     makeGrid(inpt.value*inpt.value);
     container.style.display = 'grid';
-    container.style.gridTemplateColumns = 'repeat(inpt.value, 30px)';
-    container.style.gridTemplateRows = 'repeat(inpt.value, 30px)';
+    container.style.gridTemplateColumns = `repeat(${inpt.value}, auto)`;
+    container.style.gridTemplateRows = `repeat(${inpt.value}, auto)`;
+    container.style.width = '500px';
+    container.style.height = '500px';
 })
 
