@@ -13,13 +13,17 @@ makeGrid(256)
 
 
 const squaresAll = document.querySelectorAll('.square');
-squaresAll.forEach((square) => {
-    square.addEventListener('mouseover', () => {
-        square.style.backgroundColor = 'black';
-    
+function colorOnHover () {
+    squaresAll.forEach((square) => {
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'black';
+        
+        })
+        
     })
-    
-})
+
+}
+
 
 const inpt = document.createElement('input');
 inpt.setAttribute('type','number');
