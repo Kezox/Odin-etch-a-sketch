@@ -38,6 +38,9 @@ const header = document.querySelector('h1');
 header.appendChild(inpt);
 
 const btn = document.createElement('button');
+btn.style.width =  '80px';
+btn.style.height = '30px';
+btn.textContent = 'Apply';
 header.appendChild(btn);
 
 btn.addEventListener('click', () => {
