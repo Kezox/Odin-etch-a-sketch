@@ -45,20 +45,27 @@ btn.textContent = 'Apply';
 header.appendChild(btn);
 
 btn.addEventListener('click', () => {
-    for (let i = 0;i < squaresAll.length; i++) {
-        squaresAll[i].remove();
-    }
+    const newItems = document.querySelectorAll('.square');
+    if (newItems < 0) {
+        for (let i = 0;i < squaresAll.length; i++) {
+            squaresAll[i].remove();
+        }
+    } else {
+        for (let i = 0;i < newItems.length;i++) {
+            newItems[i].remove();
+        }
+    };
     makeGrid(inpt.value*inpt.value);
     container.style.display = 'grid';
     container.style.gridTemplateColumns = `repeat(${inpt.value}, auto)`;
     container.style.gridTemplateRows = `repeat(${inpt.value}, auto)`;
     container.style.width = '500px';
     container.style.height = '500px';
+
     function createElementListener () {
-        const newItems = document.querySelectorAll('.square');
-        newItems.forEach(newItem => {
-            newItem.addEventListener('mouseover', () => {
-                newItem.style.backgroundColor = 'black';
+        newItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.backgroundColor = 'black';
             })
         })
     }
