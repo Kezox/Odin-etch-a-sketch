@@ -19,6 +19,7 @@ makeGrid(256)
 
 
 const squaresAll = document.querySelectorAll('.square');
+
 function colorOnHover () {
     squaresAll.forEach((square) => {
         square.addEventListener('mouseover', () => {
@@ -53,5 +54,14 @@ btn.addEventListener('click', () => {
     container.style.gridTemplateRows = `repeat(${inpt.value}, auto)`;
     container.style.width = '500px';
     container.style.height = '500px';
+    function createElementListener () {
+        const newItems = document.querySelectorAll('.square');
+        newItems.forEach(newItem => {
+            newItem.addEventListener('mouseover', () => {
+                newItem.style.backgroundColor = 'black';
+            })
+        })
+    }
+    createElementListener();
 })
 
