@@ -38,3 +38,11 @@ input {
     border-radius: 15px;
     outline: none;
 }
+
+button {
+    background-color: rgb(112, 10, 19);
+    color: white;
+    border: 5px solid rgb(0, 83, 38);
+    border-radius: 15px;
+    font-weight: bold;
+}
