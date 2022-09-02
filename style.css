@@ -49,6 +49,11 @@ button {
     font-weight: bold;
 }
 
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
