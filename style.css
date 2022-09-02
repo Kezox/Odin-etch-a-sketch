@@ -14,3 +14,11 @@
     border-radius: 10px;
 
 }
+
+.aboveGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(0, 83, 38);
+
+}
