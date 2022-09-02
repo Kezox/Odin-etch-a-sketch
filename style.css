@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .square {
     border: 1px solid rgb(185, 185, 185);
 }
@@ -45,4 +47,16 @@ button {
     border: 5px solid rgb(0, 83, 38);
     border-radius: 15px;
     font-weight: bold;
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1 {
+    font-weight: bold;
+    color: white;
 }
