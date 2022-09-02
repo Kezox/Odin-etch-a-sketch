@@ -63,6 +63,7 @@ btn.addEventListener('click', () => {
     container.style.height = '500px';
 
     function createElementListener () {
+        const newItems = document.querySelectorAll('.square');
         newItems.forEach(item => {
             item.addEventListener('mouseover', () => {
                 item.style.backgroundColor = 'black';
