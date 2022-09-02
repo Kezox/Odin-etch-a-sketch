@@ -1,3 +1,16 @@
 .square {
     border: 1px solid rgb(185, 185, 185);
 }
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    border: 5px solid rgb(0, 83, 38);
+    border-radius: 10px;
+
+}
