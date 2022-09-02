@@ -2,10 +2,10 @@ const container = document.querySelector('.container');
 const gridItem = document.createElement('div');
 
 container.style.display = 'grid';
-container.style.gridTemplateColumns = 'repeat(16, 30px)';
-container.style.gridTemplateRows = 'repeat(16, 30px)';
-container.style.width = '500px';
-container.style.height = '500px';
+container.style.gridTemplateColumns = 'repeat(16, 1fr)';
+container.style.gridTemplateRows = 'repeat(16, 1fr)';
+container.style.width = '504px';
+container.style.height = '504px';
 
 function makeGrid(gridSize) {
     for (let i = 0;i < gridSize; i++) {
@@ -35,12 +35,16 @@ colorOnHover();
 
 const inpt = document.createElement('input');
 inpt.setAttribute('type','number');
+inpt.setAttribute('max','100');
+inpt.setAttribute('min','1');
+inpt.setAttribute('placeholder','Set size of new grid (1-100)')
 const header = document.querySelector('h1');
 header.appendChild(inpt);
 
 const btn = document.createElement('button');
 btn.style.width =  '80px';
 btn.style.height = '30px';
+
 btn.textContent = 'Apply';
 header.appendChild(btn);
 
@@ -59,8 +63,8 @@ btn.addEventListener('click', () => {
     container.style.display = 'grid';
     container.style.gridTemplateColumns = `repeat(${inpt.value}, auto)`;
     container.style.gridTemplateRows = `repeat(${inpt.value}, auto)`;
-    container.style.width = '500px';
-    container.style.height = '500px';
+    container.style.width = '504px';
+    container.style.height = '504px';
 
     function createElementListener () {
         const newItems = document.querySelectorAll('.square');
