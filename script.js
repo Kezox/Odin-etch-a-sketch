@@ -33,7 +33,7 @@ function colorOnHover () {
 colorOnHover();
 
 
-const inpt = document.createElement('input');
+const inpt = document.querySelector('input');
 inpt.setAttribute('type','number');
 inpt.setAttribute('max','100');
 inpt.setAttribute('min','1');
@@ -41,14 +41,12 @@ inpt.setAttribute('maxlength', '2');
 inpt.setAttribute('onkeyup', 'if (parseInt(inpt.value)>100) {inpt.value=100;return false}');
 inpt.setAttribute('placeholder','Set size of new grid (1-100)')
 const header = document.querySelector('h1');
-header.appendChild(inpt);
 
-const btn = document.createElement('button');
+
+const btn = document.querySelector('button');
 btn.style.width =  '80px';
 btn.style.height = '30px';
 
-btn.textContent = 'Apply';
-header.appendChild(btn);
 
 btn.addEventListener('click', () => {
     const newItems = document.querySelectorAll('.square');
